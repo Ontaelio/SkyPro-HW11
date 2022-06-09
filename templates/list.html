@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Candidates list</title>
+
+    <style>
+        h1 {color: #960086;
+            background-color: #EEEE00;
+            text-align: center;
+            font-family: Arial;}
+        p  {text-align: center;
+            font-family: Arial;}
+    </style>
+
+</head>
+
+<body>
+
+
+
+<h1>Все кандидаты</h1>
+{% for person in items %}
+    <p><a href="/candidate/{{person.id}}">{{person.name}}</a></p>
+{% endfor %}
+
+</body>
+</html>

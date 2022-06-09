@@ -1,5 +1,5 @@
-# SkyPro_HW10
-First Flask project
+# SkyPro_HW11
+Second Flask project
 
 ## To run:
 
