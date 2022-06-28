@@ -21,9 +21,22 @@
 
 </head>
 <body>
+{% if person %}
 <h1>{{person.name}}</h1>
 <p>{{person.position}}</p>
 <img src="{{person.picture}}" alt={{person.name}} width=200 class="center">
 <p><em>{{skills}}</em></p>
+{% endif %}
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
 </body>
 </html>
